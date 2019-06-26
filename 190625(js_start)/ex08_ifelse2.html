@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <p>성적을 입력하세요.</p>
+
+        <button onclick="myFunction()">눌러보세요</button>
+     
+        <p id="demo"></p>
+     
+        <script>
+            function myFunction() {
+                var greeting;
+                //var time = new Date().getHours();
+                var result = prompt('몇점 받았습니까?', ''); 
+                
+                if (result < 60) {
+                    greeting = "F입니다.";
+                } else if (result < 70) {
+                    greeting = "D입니다.";
+                } else if (result < 80) {
+                    greeting = "C입니다.";
+                } else if (result < 90) {
+                    greeting = "B입니다.";
+                } else if (result <= 100) {
+                    greeting = "A입니다.";
+                } else {
+                    greeting ="백분위로 알려주세요.";
+                }
+                document.getElementById("demo").innerHTML = greeting;
+            }
+            
+        </script>
+</body>
+</html>

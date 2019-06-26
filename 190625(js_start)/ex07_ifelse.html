@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    table, tr, td{
+        border: 1px solid black;
+        
+    }
+    table{
+        border-collapse:collapse;
+        width:20%;
+    }
+    td{
+        text-align: center;
+        height: 55px;
+    }
+    </style>
+</head>
+<body>
+        <p>지금이 무슨 계절인지 알아봅시다.</p>
+
+        <button onclick="myFunction()">눌러보세요</button>
+     <hr>
+        
+            <div>
+                <table>
+                    <tr>
+                        <td><p id="demo"></p></td>
+                    </tr>
+                </table>
+            </div>
+        </p>
+     
+        <script>
+            function myFunction() {
+                var greeting;
+                //var time = new Date().getHours();
+                var result = prompt('지금 몇월입니까?', ''); 
+                
+                if (result < 1) {
+                    greeting = result + "월은 없습니다.";
+                } else if (result < 3) {
+                    greeting = "겨울입니다.";
+                } else if (result < 6) {
+                    greeting = "봄입니다.";
+                } else if (result < 9) {
+                    greeting = "여름입니다.";
+                } else if (result < 12) {
+                    greeting = "가을입니다.";
+                } else if (result == 12) {
+                    greeting = "겨울입니다.";
+                } else {
+                    greeting = result + "월은 없습니다.";
+                }
+                document.getElementById("demo").innerHTML = greeting;
+            }
+            
+        </script>
+</body>
+</html>

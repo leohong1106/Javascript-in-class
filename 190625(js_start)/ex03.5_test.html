@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h1>폼 데이터 가져오기</h1>
+        <!-- <form id="form1" name="form1" action="" method="post"> -->
+     
+        이름 : <input type="text" name="username" id="username"><br>
+        국어 : <input type="number" name="kor" id="kor"><br>
+        영어 : <input type="number" name="eng" id="eng"><br>
+        수학 : <input type="number" name="math" id="math"><br>
+       
+        <hr>
+        총점 : <span id="total"></span><br>
+        평균 : <span id="avg"></span><br>
+       
+     
+        <button onclick="calculate();">계산</button>
+     
+        <script>
+            function calculate() {
+                var kor = document.getElementById("kor").value;
+                var eng = document.getElementById("eng").value;
+                var math = document.getElementById("math").value;
+     
+                var total = Number(kor) + Number(eng) + Number(math);
+                var avg = total / 3;
+     
+                console.log(typeof kor);
+                console.log(typeof eng);
+                console.log(typeof math);
+                console.log(total);
+                console.log(avg);
+     
+                document.getElementById("total").innerHTML = total;
+                document.getElementById("avg").innerHTML = avg;
+            }
+        </script>
+</body>
+</html>
