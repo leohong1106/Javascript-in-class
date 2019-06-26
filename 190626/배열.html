@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        var season = ["봄", "여름", "가을", "겨울"];
+        document.write("월 : " + months + "<br>");  // 배열명 참조
+        document.write("요일 : " + days + "<br>");  // 배열명 참조 
+        document.write("<hr>" + season.length + " 계절 종류 : ");
+        for (i = 0; i < season.length; i++) {
+            document.write(season[i] + ' '); // 배열원소 참조
+        }
+        document.write("<br>");
+        document.write("<hr>" + season.length + " 계절 종류 : ");
+        season.forEach(function (value) {
+            document.write(value, ' ');
+        })
+        document.write("<br>");
+        document.write("<hr>" + season.length + " 계절 종류 : ");
+        for (var i in season) {
+            document.write(season[i] + " ");
+        }
+        document.write("<br>")
+        document.write("<br>")
+        document.write("이름1"), document.write("님이 입장하셨습니다."); document.write("<br>")
+        document.write("이름2"),document.write("<br>")
+        document.write("이름3"),document.write("<br>")
+        document.write("이름4"),document.write("<br>")
+        document.write("이름5"),document.write("<br>")
+        document.write("이름6"),document.write("<br>")
+        document.write("이름7"),document.write("<br>")
+        document.write("이름8"),document.write("<br>")
+        document.write("이름9"),document.write("<br>")
+        document.write("이름10"),document.write("<br>")
+        document.write("이름11"),document.write("<br>")
+        document.write("이름12"),document.write("<br>")
+        document.write("이름13"),document.write("<br>")
+        document.write("이름14"),document.write("<br>")
+        document.write("이름15"),document.write("<br>")
+        document.write("이름16"),document.write("<br>")
+        document.write("이름17"),document.write("<br>")
+        document.write("이름18"),document.write("<br>")
+        document.write("이름19"),document.write("<br>")
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write("<hr>"); document.write("<hr>");
+        let num1 = 3;
+        for (let x = 1; x <= 8; x = x + 1) {
+
+            document.write(x * num1, ",");
+        }
+        document.write(num1 * 9)
+        document.write("<hr>"); document.write("<hr>");
+        let num2 = 4;
+        for (let x = 1; x <= 8; x = x + 1) {
+
+            document.write(x * num2, ",");
+        }
+        document.write(num2 * 9)
+        document.write("<hr>"); document.write("<hr>");
+        document.write("<hr>"); document.write("<hr>");
+
+        for (let x = 1; x <= 9; x = x + 1) {
+
+            for (let y = 1; y <= 8; y = y + 1) {
+                document.write(x * y, " ")
+            }
+            document.write(x * 9)
+            document.write("<br>")
+        }
+        document.write("<hr>")
+        document.write("<hr>")
+        document.write("<hr>")
+        document.write("<hr>")
+
+
+        for (let x = 1; x <= 9; x = x + 1) {
+
+            for (let y = 1; y <= 9; y = y + 1) {
+                if (y != 1) {
+                    document.write(", ")
+                }
+                document.write(x * y)
+            }
+            document.write("<br>")
+        }
+        document.write("<br>")
+
+    </script>
+</body>
+
+</html>
