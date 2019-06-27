@@ -16,14 +16,13 @@
         function myFunction() {
             var result = prompt('몇 줄로 만듭니까?', '');
             for (var i = 1; i <= result; i++) {
-                for (var k = result; k >=result; k = k - 1 ) {
-                    document.write("a");
-                    for (var j = 1; j <= i * 2 - 1; j++) {
-                        document.write("*");
-                    }
+                for (var k = result; k >= i; k = k - 1)
+                    document.write("&nbsp;");
+                for (var j = 1; j <= i * 2 - 1; j++) {
+                    document.write("*");
+                }
                 document.write("<br>")
             }
-        }
         }
     </script>
 </body>
