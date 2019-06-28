@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="myFunction()">클릭</button>
+    <hr>
+    <br>
+    <script>
+        // function myFunction() {
+        //     var result = prompt('아래 형식대로 이름과 전화번호를 입력해주세요', '"이름","전화번호"');
+        // document.write("[",result,"]");
+        // }
+        function myFunction() {
+            var name = prompt('이름을 입력해주세요', '');
+            var number = prompt('전화번호를 입력해주세요', '');
+            var data = [];
+            data.push(name,number);
+            
+
+
+
+
+
+            console.log(data);
+        }
+
+
+
+    </script>
+    <button onclick="alert('리스트 출력됨!')">리스트 출력</button>
+</body>
+
+</html>
