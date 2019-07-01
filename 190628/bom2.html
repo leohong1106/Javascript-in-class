@@ -1,0 +1,14 @@
+<script>
+    var i = 0;
+    var autolog = setTimeout("dosomething()", 2000);
+
+    function dosomething() {
+        console.log(i++);
+        autolog = setTimeout("dosomething()", 1);
+
+
+        function myfunc() {
+            clearTimeout(autolog);
+        }
+    }
+</script>

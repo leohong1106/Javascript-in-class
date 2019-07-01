@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var title = ["이름", "국어", "영어", "수학"];
+        var data = [
+            ["학생A", 60, 40, 80],
+            ["학생B", 80, 70, 80],
+            ["학생C", 50, 60, 80]
+        ];
+        console.log(data.length);
+        let sum = 0;
+        let avg = 0;
+        for (let i = 0; i < data.length; i++) {
+            sum = 0;
+            avg = 0;
+            for (let j = 1; j < data[i].length; j++) {
+                sum = sum + data[i][j];
+            }
+            avg = sum / 3;
+            avg = avg.toFixed(1);
+            console.log(sum);
+            console.log(avg);
+        }
+
+    </script>
+</body>
+
+</html>

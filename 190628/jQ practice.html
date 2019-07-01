@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        /* #unum{
+            color: slateblue;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1 id="tit">전화번호부</h1>
+        <input id="unam" type="text" size="20px" placeholder="이름을 입력하세요">
+        <input id="unum" type="text" size="30px" placeholder="전화번호를 입력하세요"><br>
+        <input id="uadd" type="text" size="54px" placeholder="주소를 입력하세요"><br>
+        <button id="btn1"><strong>입력한 정보들을 추가합니다.</strong></button>
+    </div>
+
+    <div class="container">
+        <table class="table table-response">
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>주소</th>
+                    <th>전화번호</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                let unam = $('#unam').val();
+                let unum = $('#unum').val();
+                let uadd = $('#uadd').val();
+                $('tbody').append('<tr><td>' + unam + '</td><td>' + unum + '</td><td>' + uadd + '</td></tr>');
+                $('#unam').val('');
+                $('#unum').val('');
+                $('#uadd').val('');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
