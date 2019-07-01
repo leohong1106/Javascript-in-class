@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>Todolist practice</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .container {
+            border: 1px solid black;
+            padding: 0px 10px 10px 10px;
+            width: 570px;
+            outline-width: 3px;
+            outline-color: rgb(10, 170, 10);
+            outline-style: solid;
+        }
+
+        .jumbotron {
+            width: 550px;
+        }
+    </style>
+    <script>
+        // ↓새로 생긴 것들에 대해서도 같은 작업을 수행
+        $(document).on('click', '.close', function(){
+        //     // ↓hide 안에 있는 시간만큼 느리게 지워짐 
+            $(this).parent().hide(500);
+        })
+
+
+
+
+
+
+
+
+        // ↓만약에 이것만 있으면 기존것들만 없어지고 새로운것들은 x눌러도 적용이안됨
+        $(function () {
+            // $('.close').click(function () {
+            //     // console.log($(this).parent)
+            //     $(this).parent().hide(1000);
+            // })
+        
+            $("#btn").click(function(){
+                let txt = $('#txt').val();
+                $('ul').append('<li class="list-group-item justify-content-between align-items-center">'  + txt + '<span class="close">X</span></li>');
+                $('#txt').val('');
+            })
+        })
+    </script>
+</head>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+//실습과제
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Todo List</h1>
+            <br><input id="txt" type="text" placeholder="Title..." size="57px"> <button id="btn" type="button">추가</button>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item justify-content-between align-items-center">
+                할 일 1 @(Mon Jul 01 2019)
+                <span class="close">X</span>
+            </li>
+            <li class="list-group-item justify-content-between align-items-center">
+                할 일 2
+                <span class="close">X</span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
